@@ -1,20 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabetic
- *
- * Return: Always (Success)
- */
+  * main - Prints a hexadecimal string
+  *
+  * Return: Always (Success)
+  */
 int main(void)
 {
-	int n;
+	char z;
 
-	for (n = 48; n <= 57; n++)
+	for (z = '0'; z <= '9'; z++)
 	{
-		putchar(n);
-		putchar(',');
-		putchar(' ');
+		putchar(z);
 	}
+
+	for (z = 'a'; z <= 'f'; z++)
+	{
+		putchar(z);
+	}
+
 	putchar('\n');
+
 	return (0);
 }
