@@ -1,22 +1,23 @@
 #include <stdio.h>
 
 /**
-  * main - Prints a hexadecimal string
+  * main - Prints a serie of numbers with commas
   *
-  * Return: Always (Success)
+  * Return: Always (Success);
   */
 int main(void)
 {
-	int z;
+	int k;
 
-	for (z = '0'; z <= '9'; z++)
+	for (k = '0'; k <= '9'; k++)
 	{
-		putchar(z);
-	}
+		putchar(k);
 
-	for (z = 'a'; z <= 'f'; z++)
-	{
-		putchar(z);
+		if (k != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 
 	putchar('\n');
