@@ -3,9 +3,9 @@
 #include <time.h>
 
 /**
- * main - Print if nuber is positive,negative,zero
+ * main - Prints the alphabetic
  *
- * Result: Always 0 (Success)
+ * Return: Always (Success)
  */
 int main(void)
 {
