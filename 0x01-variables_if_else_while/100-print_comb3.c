@@ -1,22 +1,29 @@
 #include <stdio.h>
 
 /**
-  * main - Prints a serie of numbers with commas
+  * main - Prints combination of numbers
   *
-  * Return: Always (Success);
+  * Return: Always (Success)
   */
 int main(void)
 {
-	int k;
+	int d, j;
 
-	for (k = '0'; k <= '9'; k++)
+	for (d = '0'; d <= '9'; d++)
 	{
-		putchar(k);
-
-		if (k != '9')
+		for (j = '0'; j <= '9'; j++)
 		{
-			putchar(',');
-			putchar(' ');
+			if (d < j)
+			{
+				putchar(d);
+				putchar(j);
+
+				if (d != '8' || (d == '8' && j != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
 	}
 
