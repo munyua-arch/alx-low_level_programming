@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - Print positive or negative or zero
+ * main - Print if nuber is positive,negative,zero
  *
  * Result: Always 0 (Success)
  */
