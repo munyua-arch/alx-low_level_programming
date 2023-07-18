@@ -1,25 +1,44 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
- * main - computes and prints the sum of all the multiples
- * of 3 or 5 below 1024. Done the Felix Obianozie way
- * Return: 0
- */
-
-int main(void)
+  * print_to_98 - Prints all natural numbers from n to 98
+  * @n: The number to start printing from
+  *
+  * Return: Always 0.
+  */
+void print_to_98(int n)
 {
-	int sum;
-	int i;
-
-	sum = 0;
-
-	for (i = 0; i < 1024; ++i)
+	if (n <= 98)
 	{
-		if ((i % 3) == 0 || (i % 5) == 0)
+		for (; n <= 98; n++)
 		{
-			sum = sum + i;
+			if (n == 98)
+			{
+				printf("%d", n);
+				printf("\n");
+				break;
+			}
+			else
+			{
+				printf("%d, ", n);
+			}
 		}
 	}
-	printf("%i\n", sum);
-	return (0);
+	else
+	{
+		for (; n >= 98; n--)
+		{
+			if (n == 98)
+			{
+				printf("%d", n);
+				printf("\n");
+				break;
+			}
+			else
+			{
+				printf("%d, ", n);
+			}
+		}
+	}
 }
