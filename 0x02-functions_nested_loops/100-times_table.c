@@ -1,31 +1,51 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-  * main - Prints the first 52 fibonacci numbers
+  * print_times_table - Prints a multiplication table up to param
+  * @n: The number to be treated
   *
-  * Return: Nothing!
+  * Return: Number matrix
   */
-int main(void)
+void print_times_table(int n)
 {
-	int i = 0;
-	long j = 1, k = 2;
+	int x, y, z;
 
-	while (i < 50)
+	if (n >= 0 && n <= 14)
 	{
-		if (i == 0)
-			printf("%ld", j);
-		else if (i == 1)
-			printf(", %ld", k);
-		else
+		for (x = 0; x <= n; x++)
 		{
-			k += j;
-			j = k - j;
-			printf(", %ld", k);
+			for (y = 0; y <= n; y++)
+			{
+				z = x * y;
+				if (z > 99)
+				{
+					_putchar(',');
+					_putchar(32);
+					_putchar((z / 100) + '0');
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
+				}
+				else if (z > 9)
+				{
+					_putchar(',');
+					_putchar(32);
+					_putchar(32);
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
+				}
+				else
+				{
+					if (y != 0)
+					{
+						_putchar(',');
+						_putchar(32);
+						_putchar(32);
+						_putchar(32);
+					}
+					_putchar(z + '0');
+				}
+			}
+			_putchar('\n');
 		}
-
-		++i;
 	}
-
-	printf("\n");
-	return (0);
 }
