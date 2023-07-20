@@ -9,13 +9,14 @@
 
 int _isupper(int c)
 {
-	char upp;
+	char upper;
 
-	upp = c;
+	upper = c;
 
-	if (upp >= 65 && upp <= 95 )
-
+	if (upper >= 65 && upper <= 90)
+	{
 		return (1);
+	}
 	return (0);
 	_putchar('\n');
 }
