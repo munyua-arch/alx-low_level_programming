@@ -61,3 +61,22 @@ void print_number(int n)
 		count--;
 	} while (count > -1);
 }
+
+/**
+ * _pow - power fuction
+ * @a: value to use.
+ * @b: growth count
+ *
+ * Return: value int.
+ */
+int _pow(int a, int b)
+{
+	int i;
+	int p = a;
+
+	for (i = 1 ; i < b ; i++)
+	{
+		a *= p;
+	}
+	return (a);
+}
