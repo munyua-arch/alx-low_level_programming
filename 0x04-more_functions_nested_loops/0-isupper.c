@@ -14,9 +14,8 @@ int _isupper(int c)
 	upp = c;
 
 	if (upp >= 65 && upp <= 95 )
-	{
+
 		return (1);
-	}
 	return (0);
 	_putchar('\n');
 }
