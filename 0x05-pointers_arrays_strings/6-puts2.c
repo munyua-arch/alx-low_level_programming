@@ -19,7 +19,7 @@ void puts2(char *str)
 		lon++;
 	}
 	k = lon - 1;
-	for (l = 0; l <= k; k++)
+	for (l = 0; l <= k; l++)
 	{
 		if (l % 2 == 0)
 		{
