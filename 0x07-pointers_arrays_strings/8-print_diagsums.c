@@ -1,3 +1,4 @@
+
 #include "main.h"
 #include <stdio.h>
 
@@ -10,7 +11,7 @@
 
 void print_diagsums(int *a, int size)
 {
-
+	/*Declaring variables*/
 	int c;
 	int sum1, sum2;
 
@@ -18,13 +19,13 @@ void print_diagsums(int *a, int size)
 	sum2 = 0;
 
 	c = 0;
-	while (c < size)
+	while (c < size) /*number repetitions*/
 	{
-
-		sum1 = sum1 + *(a + i * size + i);
-		sum2 = sum2 + *(a + i * size + size - i - 1);
+		/*sums for diagsums*/
+		sum1 = sum1 + *(a + c * size + c);
+		sum2 = sum2 + *(a + c * size + size - c - 1);
 
 		c++;
 	}
-	printf("%d, %d\n", sum1, sum2);
+	printf("%c, %c\n", sum1, sum2);
 }
