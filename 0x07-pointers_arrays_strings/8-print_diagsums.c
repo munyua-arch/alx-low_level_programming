@@ -9,17 +9,17 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int b, sum1, sum2;
+	int c, sum1, sum2;
 
 	sum1 = 0;
 	sum2 = 0;
 
-	b = 0;
-	while (b < size)
+	c = 0;
+	while (c < size)
 	{
 		sum1 = sum1 + *(a + b * size + b);
 		sum2 = sum2 + *(a + b * size + size - a -1);
-		b++;
+		c++;
 	}
 	printf("%d, %d\n", sum1, sum2);
 }
