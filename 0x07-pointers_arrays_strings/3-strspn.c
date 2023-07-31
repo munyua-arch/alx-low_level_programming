@@ -1,29 +1,24 @@
 #include "main.h"
-
 /**
- * _strspn - Locates a character in a string
- * @s: This is the main C string to be scanned.
- * @accept: This is the string containing the list of characters to match in s
- * Return: return count
+ * _strspn - prints the consecutive caracters of s1 that are in s2.
+ * @s: source string
+ * @accept: searching string
+ *
+ * Return: new string.
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int a = 0;
-	int b;
+	unsigned int a, b;
 
-	while (*s)
+	for (b = 0; *(s + b); b++)
 	{
-		for (b = 0; aceept[b]; b++)
+		for (a = 0; *(accept + a); a++)
 		{
-			if (*s == accept[b])
-			{
-				a++;
+			if (*(s + b) == *(accept + a))
 				break;
-			}
-			else if (accept[a + 1] == '\0')
-				return (a);
 		}
-		s++;
+	if (*(accept + a) == '\0')
+		break;
 	}
-	return (a);
+	return (b);
 }
