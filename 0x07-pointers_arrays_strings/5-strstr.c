@@ -6,23 +6,24 @@
  * @needle: searched in haystack
  * Return: return 0
  */
-char *_strstr(char *haystack, char *needle)
+
+char  *_strstr(char *haystack, char *needle)
 {
 	char *p, *q;
 
-	for (; *haystack != '\0'; haystack++)
+	while (*haystack != '\0')
 	{
-		char *p = haystack;
-		char *q = needle;
+		p = haystack;
+		q = needle;
 
-		while (*p == *q && *q != '\0')
+		while (*haystack != '\0' && *q != '\0' && *haystack == *q)
 		{
-			p++;
+			haystack++;
 			q++;
 		}
-
 		if (*q == '\0')
-			return (haystack);
+			return (p);
+		haystack = p + 1;
 	}
 	return (0);
 }
