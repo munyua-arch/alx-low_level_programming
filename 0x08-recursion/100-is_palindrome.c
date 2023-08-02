@@ -30,7 +30,7 @@ int pal(char *s, int a)
 	}
 	if (*s == *(s + a))
 	{
-		return (pa(s + 1, a - 2));
+		return (pal(s + 1, a - 2));
 	}
 	return (0);
 }
