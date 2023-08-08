@@ -7,36 +7,44 @@
  * @av: height of grid
  * Return: the args one line at a time
  */
+
 char *argstostr(int ac, char **av)
 {
-	int a, b, c, d;
 	char *p;
+	int count, a, b, c;
 
+	a = 0;
+	b = 0;
 	c = 0;
-	d = 0;
+	count = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-
-	for (a = 0; a < ac; a++)
+	while (a < ac)
 	{
-		for (b = 0; av[a][b]; b++)
-			d++;
+		b = 0;
+		while (av[a][b] != '\0')
+		{
+			count++;
+			b++;
+		}
+		a++;
 	}
-	d += ac;
-
-	p = malloc(sizeof(char) * d + 1);
-
+	count = count + ac + 1;
+	p = malloc(sizeof(char) * count);
 	if (p == NULL)
+	{
 		return (NULL);
-
+	}
 	for (a = 0; a < ac; a++)
 	{
-		for (b = 0; av[a][b]; b++)
+		for (b = 0; av[a][b] != '\0'; b++)
 		{
 			p[c] = av[a][b];
 			c++;
 		}
+		p[c] = '\n';
+		c++;
 	}
 	return (p);
 }
