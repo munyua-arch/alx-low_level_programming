@@ -25,11 +25,11 @@ list_t *add_node(list_t **head, const char *str)
 		free(added);
 		return (NULL);
 	}
-	for (leng = 0; str[len];)
+	for (len = 0; str[len];)
 		len++;
 
 	added->str = duplicate;
-	added->length = length;
+	added->len = len;
 	added->next = *head;
 
 	*head = added;
