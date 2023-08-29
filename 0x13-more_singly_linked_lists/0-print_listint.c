@@ -1,7 +1,3 @@
-/*
- * File: 0-print_listint.c
- * Auth: Dennis Murimi
- */
 
 #include "lists.h"
 #include <stdio.h>
@@ -14,14 +10,14 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t nodes = 0;
+	size_t num_nodes = 0;
 
 	while (h)
 	{
-		nodes++;
+		num_nodes++;
 		printf("%d\n", h->n);
 		h = h->next;
 	}
 
-	return (nodes);
+	return (num_nodes);
 }
